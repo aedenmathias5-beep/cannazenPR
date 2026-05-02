@@ -1,24 +1,24 @@
 {
   "name": "cannazen",
-  "version": "0.0.0",
-  "description": "E-commerce platform with TypeScript, React, and Node.js",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aedenmathias5-beep/cannazenPR.git"
-  },
-  "keywords": ["ecommerce", "typescript", "react", "nodejs", "pnpm"],
-  "scripts": {
-    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "build": "echo 'Static HTML - no build needed'",
-    "start": "echo 'Static HTML - no server needed'",
-    "dev": "echo 'Static HTML - no dev server needed'",
-    "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
-  },
+  "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "devDependencies": {
-    "typescript": "~5.9.2",
-    "prettier": "^3.8.1"
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.0.0"
   }
 }
